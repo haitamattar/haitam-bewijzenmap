@@ -12,9 +12,9 @@
 */
 
 // Route::get('/', function () {
-// 	
+//
 // });
-// 
+//
 // Route::get('about', function(){
 // 	return view('pages.about');
 // });
@@ -37,16 +37,6 @@ Route::get('UserFirstName', function(){
 
 // Route::get('werkprocess/{id}', );
 
-
-Route::get('projects', function(){
-	$projects = App\projects::all();
-	foreach ($projects as $project) {
-		// $werkproces = App\workProcess::find($project->workProcess_id);
-		echo $project->projectName . "<br />";
-		echo $project->content . "<br />";
-	}
-});
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -58,7 +48,7 @@ Route::get('projects', function(){
 |
 */
 
-    
+
 use Illuminate\Http\Request;
 
 
@@ -83,11 +73,11 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('createProject', 'projectController@createProjectForm')->middleware('isAdmin');
 	//store project na aanmaken
 	Route::post('storeProject', 'projectController@store')->middleware('isAdmin');
-	
+
 	Route::get('form' , function(){
 		return view('from');
 	});
-		
+
 		Route::get('access', function(){
 			echo 'You have access';
 		})->middleware('isAdmin');

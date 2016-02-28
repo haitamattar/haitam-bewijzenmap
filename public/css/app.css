@@ -169,7 +169,7 @@ body{
 	box-sizing: border-box !important;
 	-moz-box-sizing: border-box !important;
 	-webkit-box-sizing: border-box !important;
-	border-bottom: 5pt solid;
+	border-bottom: 3pt solid;
 	border-color: #1CA4FF;
 	background-color: transparent;
 }
@@ -177,14 +177,14 @@ body{
 	box-sizing: border-box !important;
 	-moz-box-sizing: border-box !important;
 	-webkit-box-sizing: border-box !important;
-	border-bottom: 5pt solid;
+	border-bottom: 3pt solid;
 	border-color: #1CA4FF;
 	background-color: transparent;
 }
 .background-header{
 	background-color: gray;
 	width: 100%;
-	height: 300px;
+	height: 280px;
 	margin-top: -100px;
 	background: linear-gradient(rgba(62, 62, 62, 0.7), rgba(62, 62, 62, 0.7)),
 	            url('../images/werkprocessen.jpg') center center no-repeat;
@@ -197,6 +197,29 @@ body{
 	font-weight: bold;
 	text-align: center;
 }
+.background-header small{
+	display: block;
+	padding-top: 10px;
+	color: #d0d0d0;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-size: 11pt;
+}
+@media screen and (max-width: 767px) {
+	.background-header h1{
+		font-size: 17pt;
+	}
+	.background-header small{
+		font-size: 9pt;
+	}
+	.navbar-collapse{
+		background-color: rgba(122, 122, 122, 0.98);
+	}
+	.navbar-default .navbar-nav>li>a{
+		font-weight: 500 !important;
+		color: white;
+	}
+}
 .container-center{
 	margin-right: auto;
 	margin-left: auto;
@@ -206,8 +229,9 @@ body{
 	padding-top: 30px;
 }
 .werkprocess{
-	height: 200px;
-	width: 450px;
+	margin-top: 25px;
+	height: 180px;
+	width: 100%;
 	background-color: white;
 	overflow: hidden;
 	border-radius: 7px;
@@ -215,14 +239,52 @@ body{
 	-moz-box-shadow: 0px 0px 21px -4px rgba(0,0,0,0.46);
 	box-shadow: 0px 0px 21px -4px rgba(0,0,0,0.46);
 }
+.werkprocess p{
+	padding: 10px;
+}
 .header-werkprocess{
 	width: 100%;
 	height: 45px;
-	background-color: green;
+	background-color: rgb(88, 66, 135);
 	color: white;
 	font-family: 'Open Sans';
 	font-weight: 400;
 	font-size: 12pt;
 	padding: 10px;
+}
+.header-werkprocess span{
+	float: right;
+}
+.custom-werk-btn{
+	position: absolute;
+	font-family: 'Open Sans';
+	bottom:   0;
+	width: 150px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+	border-radius: 80px;
+	border: 0px;
+}
+.btn-color1{
+	background-color: #27ae60;
+}
+.btn-color1:hover{
+	background-color: #259655;
+}
+.btn-color1:active:focus{
+	background-color: #259655;
+}
+.btn-color1:focus{
+	background-color: #27ae60;
+	outline: 0 !important;
+	webkit-box-shadow: none;
+	box-shadow: none;
+}
+.center-project{
+	font-size: 16px;
+	line-height: 24px;
+	color: #333333;
+	max-width: 700px;
+	padding-top: 50px;
 }
 /*# sourceMappingURL=app.css.map */
