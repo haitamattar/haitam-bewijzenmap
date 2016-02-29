@@ -50,7 +50,7 @@
                     <li><a href="{{ url('/') }}">werkprocessen</a></li>
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/stagegegevens') }}">stage gegevens</a></li>
+                    <li><a href="{{ url('/stageGegevens') }}">stage gegevens</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->

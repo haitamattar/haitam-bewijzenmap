@@ -11,32 +11,6 @@
 |
 */
 
-// Route::get('/', function () {
-//
-// });
-//
-// Route::get('about', function(){
-// 	return view('pages.about');
-// });
-
-Route::get('about', 'PagesController@about');
-
-//echo user name by id
-Route::get('object/{id}', function($id){
-	$gebruikers = App\User::find($id);
-	echo $gebruikers->name;
-});
-
-//echo id of first name
-Route::get('UserFirstName', function(){
-	$gebruikers = App\projects::where('projectName', '=', 'Haitam')->first();
-	echo $gebruikers->id;
-});
-
-
-
-// Route::get('werkprocess/{id}', );
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -58,9 +32,15 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/', 'werkProcessenController@getWerkprocessen');
 	//zie voor voorbeeld hoe schrijven naar database
 	Route::get('werkprocessen', 'werkProcessenController@getWerkprocessen');
+	//laat de projecten zien die aan een werkprocess zijn gelinked
 	Route::get('werkprocess/{id}', 'projectController@showWerkprocessProjects');
 	//laat sinle project zien
 	Route::get('project/{id}', "projectController@showProject");
+	//stagegegevens
+	Route::get('stageGegevens', function(){
+		return view('stageGegevens');
+	});
+	//***************************************ALLEEN VOOR ADMIN********************************************
 	//maak werkprocess
 	Route::get('createWerkprocessen', 'werkProcessenController@createWorkprocess')->middleware('isAdmin');
 	//store werkprocess
